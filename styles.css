@@ -1165,6 +1165,10 @@ h3 a {
   margin-top: 32px;
 }
 
+.listing-group[id] {
+  scroll-margin-top: 24px;
+}
+
 .listing-group .section-title {
   margin-bottom: 16px;
 }
