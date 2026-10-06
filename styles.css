@@ -164,7 +164,7 @@ main {
   display: flex;
   min-height: 330px;
   flex-direction: column;
-  padding-top: 28px;
+  padding-top: 0;
   min-width: 0;
 }
 
