@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KoBot 1.5 Improvement Research | Young Chang</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="brand" href="../index.html#top">Young Chang</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="../index.html#top">Home</a>
+          <a href="../index.html#publications">Publications</a>
+          <a href="../index.html#projects" aria-current="location">Projects</a>
+        </nav>
+      </header>
+
+      <main class="project-detail">
+        <section class="detail-header">
+          <a class="back-link" href="../index.html#projects">Back to projects</a>
+          <p class="kicker">2025.03–2025.06</p>
+          <h1>KoBot 1.5 Improvement Research</h1>
+          <div class="detail-meta">
+            <span>Statistical AI services</span>
+            <span>Prompt engineering</span>
+            <span>Question-refinement flows</span>
+          </div>
+        </section>
+
+        <figure class="detail-figure project-teaser">
+          <img class="detail-image" src="../figure/Cobot.png" alt="KoBot enhancement workflow overview" loading="eager" width="1692" height="930" />
+          <figcaption class="figure-caption">Enhancement direction for Statistics Korea's generative AI chatbot.</figcaption>
+        </figure>
+
+        <section class="detail-section">
+          <h2>Overview</h2>
+          <div class="detail-body">
+            <p>
+              KoBot 1.5 is an improvement project for Statistics Korea’s generative AI chatbot. We proposed interface redesigns, prompt templates, and question-refinement flows to help users find relevant statistical tables. The work was conducted by the Statistical Service Innovation Task Force during the 2025 1st Youth Internship Program.
+            </p>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h2>Background</h2>
+          <div class="detail-body">
+            <p>
+              The team’s work on building and curating KoBot training data informed the improvement proposal. Internal-user feedback, hands-on observations, and survey results revealed repetitive answers, hallucinated resources, date recognition errors, and difficulty discovering related statistics.
+            </p>
+            <p>
+              Users also had trouble distinguishing statistics recommendation from general AI chat. These issues motivated clearer guidance, more structured responses, and clarification of ambiguous questions.
+            </p>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h2>Design &amp; Development</h2>
+          <div class="detail-body">
+            <h3>Interface Design</h3>
+            <ul>
+              <li>Redesigned the main screen to clarify that KoBot specializes in recommending statistical tables.</li>
+              <li>Added concepts for monthly popular statistics and related resource recommendations.</li>
+              <li>Presented Figma screens for the main page, result page, term explanation panel, help and FAQ, and newly proposed recommendation features.</li>
+              <li>Modified the response format to include a key summary, representative figures, and the context or purpose of the recommended statistics.</li>
+              <li>Separated terminology explanations into a sidebar-style flow to reduce confusion.</li>
+            </ul>
+            <h3>Prompt Design</h3>
+            <ul>
+              <li>Developed user-facing question guides by analyzing responses across question types, including time expressions, comparative or choice questions, and keyword-sensitive queries.</li>
+              <li>Created prompt templates for question refinement, including <code>target_augmentation_template</code> and <code>time_normalization_template</code>.</li>
+              <li>Proposed system-side clarification flows for ambiguous targets, age groups, relative dates, and statistical keywords.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h2>My Role</h2>
+          <div class="detail-body">
+            <p>
+              I led UI/UX design, translating user needs into feature concepts and interaction
+              flows for the chatbot. I also contributed to prompt-template improvements
+              and presentation materials.
+            </p>
+          </div>
+        </section>
+        <section class="detail-section project-outcome">
+          <h2>Outcome</h2>
+          <div class="detail-body">
+            <p>
+              <span aria-hidden="true">🎉</span> Excellence Award (2nd place) at the Statistics Korea Youth Intern Joint Project Achievement Conference.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
