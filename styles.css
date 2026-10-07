@@ -1252,3 +1252,9 @@ article.paper-card .paper-card-links a {
     max-width: 100%;
   }
 }
+
+@media (min-width: 761px) {
+  .detail-header .delivery-study-title {
+    font-size: clamp(1.8rem, 3.6vw, 2.25rem);
+  }
+}
