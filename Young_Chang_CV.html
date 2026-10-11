@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Curriculum vitae of Young Chang, an HCI researcher at Ewha Womans University studying AI, robots, and children's development.">
+  <title>Young Chang | Curriculum Vitae</title>
+  <style>
+    :root {
+      --text: #1d2025;
+      --muted: #535962;
+      --line: #c9ced4;
+      --link: #223c78;
+      --background: #f5f6f7;
+      --paper: #fff;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.58;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration-color: #b3bfcd; text-underline-offset: 3px; }
+    a:hover, a:focus-visible { color: var(--link); text-decoration-color: currentColor; }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+    .page {
+      max-width: 960px;
+      margin: 36px auto;
+      padding: 52px 64px 48px;
+      background: var(--paper);
+      box-shadow: 0 4px 32px rgba(20, 27, 40, 0.055);
+    }
+    .header { text-align: center; margin-bottom: 33px; }
+    .name { font-size: clamp(36px, 6vw, 47px); font-weight: 330; line-height: 1.12; letter-spacing: -.045em; margin: 0 0 12px; }
+    .name strong { font-weight: 750; }
+    .contact { display: flex; justify-content: center; flex-wrap: wrap; align-items: center; gap: 4px 0; color: var(--muted); font-size: 13px; }
+    .contact a { white-space: nowrap; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+    .contact .divider { color: #9299a1; padding: 0 14px; user-select: none; }
+    .cv-section { margin-top: 29px; }
+    .section-heading { display: flex; align-items: baseline; gap: 10px; margin: 0 0 16px; font-size: 22px; font-weight: 750; line-height: 1.3; letter-spacing: -.024em; }
+    .section-heading::after { content: ""; height: 1px; flex: 1; min-width: 22px; background: #303239; transform: translateY(-4px); }
+    .intro { margin: 0; }
+    .entry { margin-bottom: 18px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 24px; }
+    .entry-title { margin: 0; font-size: 16px; font-weight: 725; line-height: 1.45; }
+    .entry-date { flex-shrink: 0; color: var(--muted); font-size: 13px; font-style: italic; white-space: nowrap; }
+    .entry-role { margin: 1px 0 0; font-size: 14px; }
+    .item-list { margin: 10px 0 0; padding-left: 24px; }
+    .item-list li { margin: 7px 0; padding-left: 1px; }
+    .item-list li::marker { font-size: .82em; }
+    .item-list strong { font-weight: 725; }
+    .nested-list { list-style: none; padding-left: 26px; margin: 5px 0 0; }
+    .nested-list li { position: relative; padding-left: 15px; margin: 4px 0; }
+    .nested-list li::before { content: "–"; position: absolute; left: 0; }
+    .pub-list { display: grid; gap: 15px; }
+    .pub-row { display: grid; grid-template-columns: 115px minmax(0, 1fr); gap: 16px; }
+    .pub-venue { color: var(--muted); font-size: 13px; white-space: nowrap; padding-top: 2px; }
+    .pub-title { margin: 0; font-size: 15px; font-weight: 730; line-height: 1.48; }
+    .pub-authors { margin: 2px 0 0; font-size: 14px; }
+    .self-author { font-weight: 720; text-decoration: underline; text-underline-offset: 2px; }
+    sup { font-size: .73em; vertical-align: super; }
+    .award-list { display: grid; gap: 12px; }
+    .award { display: grid; grid-template-columns: 115px minmax(0, 1fr); gap: 16px; }
+    .award-date { font-size: 13px; white-space: nowrap; }
+    .award-title { margin: 0; font-size: 14px; }
+    .award-description { color: var(--muted); font-size: 14px; margin: 2px 0 0; }
+    .skills { margin: 0; display: grid; gap: 9px; }
+    .skill { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 14px; }
+    .skill dt { font-weight: 730; }
+    .skill dd { margin: 0; }
+    .footer { border-top: 1px solid #eceef0; margin-top: 33px; padding-top: 14px; text-align: center; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #777f88; }
+    @media (max-width: 750px) {
+      body { background: #fff; font-size: 14.5px; }
+      .page { margin: 0; padding: 35px 25px 32px; box-shadow: none; }
+      .header { margin-bottom: 26px; }
+      .name { letter-spacing: -.035em; }
+      .section-heading { font-size: 20px; margin-bottom: 13px; }
+      .cv-section { margin-top: 26px; }
+      .entry-header { align-items: flex-start; flex-wrap: wrap; gap: 0 10px; }
+      .entry-date { width: 100%; font-size: 12px; margin-top: 2px; }
+      .pub-row, .award { grid-template-columns: 1fr; gap: 1px; }
+      .pub-venue { padding-top: 0; }
+      .award-list { gap: 15px; }
+      .skill { grid-template-columns: 1fr; gap: 0; }
+      .item-list { padding-left: 20px; }
+      .nested-list { padding-left: 3px; }
+    }
+    @media (max-width: 410px) {
+      .page { padding: 26px 18px; }
+      .contact { gap: 0 6px; }
+      .contact .divider { display: none; }
+      .contact a { white-space: normal; }
+      .contact a:not(:last-child)::after { content: " ·"; color: #939aa2; }
+    }
+    @media print {
+      @page { size: A4; margin: 14mm 15mm; }
+      body { background: white; color: #111; font-size: 10.3pt; line-height: 1.38; print-color-adjust: exact; }
+      .page { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+      .header { margin-bottom: 20px; }
+      .name { font-size: 30pt; }
+      .cv-section { margin-top: 19px; }
+      .section-heading { font-size: 15pt; margin-bottom: 9px; }
+      .entry { margin-bottom: 12px; }
+      .entry-title { font-size: 11pt; }
+      .entry-date, .pub-venue, .award-date { font-size: 9pt; }
+      .entry-role, .pub-authors, .pub-title, .award-title, .award-description { font-size: 9.6pt; }
+      .item-list { margin-top: 6px; }
+      .item-list li { margin: 4px 0; }
+      .pub-list, .award-list { gap: 9px; }
+      .entry, .pub-row, .award, .skill { break-inside: avoid; }
+      .footer { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <main class="page" id="top">
+    <header class="header">
+      <h1 class="name">Young <strong>Chang</strong></h1>
+      <div class="contact" aria-label="Contact information">
+        <a href="mailto:youngchang1005@ewha.ac.kr">youngchang1005@ewha.ac.kr</a>
+        <span class="divider" aria-hidden="true">|</span>
+        <a href="https://paintedblue.github.io/">paintedblue.github.io</a>
+        <span class="divider" aria-hidden="true">|</span>
+        <a href="https://scholar.google.com/citations?user=bcUrJqoAAAAJ">Google Scholar</a>
+      </div>
+    </header>
+
+    <section class="cv-section" id="research-interests" aria-labelledby="h-interests">
+      <h2 class="section-heading" id="h-interests">Research Interests</h2>
+      <p class="intro">My research explores how AI and robots shape human behavior and social interactions in everyday life. I am particularly interested in designing interactive systems that support young children's development.</p>
+    </section>
+
+    <section class="cv-section" id="education" aria-labelledby="h-education">
+      <h2 class="section-heading" id="h-education">Education</h2>
+      <div class="entry">
+        <div class="entry-header"><h3 class="entry-title">Ewha Womans University</h3><time class="entry-date">2025.09 – 2027.08 (Expected)</time></div>
+        <p class="entry-role">M.S. in Computer Engineering (Advisor: Prof. Uran Oh)</p>
+      </div>
+      <div class="entry">
+        <div class="entry-header"><h3 class="entry-title">Chungnam National University</h3><time class="entry-date">2021.03 – 2025.08</time></div>
+        <p class="entry-role">B.S. in Computer Science and Engineering (Advisor: Prof. Jaejeung Kim)</p>
+      </div>
+    </section>
+
+    <section class="cv-section" id="publications" aria-labelledby="h-publications">
+      <h2 class="section-heading" id="h-publications">Publications</h2>
+      <div class="pub-list">
+        <article class="pub-row">
+          <span class="pub-venue">CHI EA ’26</span>
+          <div><h3 class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3772363.3798832">HabitTune: AI-Generated Personalized Children's Songs for Positive Habit Development</a></h3><p class="pub-authors"><span class="self-author">Young Chang</span>, Haejin Park, Uran Oh<sup>†</sup>, Jaejeung Kim<sup>†</sup></p></div>
+        </article>
+        <article class="pub-row">
+          <span class="pub-venue">IEEE IRI ’26</span>
+          <div><h3 class="pub-title">A Guideline-Based Approach for Creating Personalized Storybooks with Generative AI</h3><p class="pub-authors">Jiseon Yang<sup>*</sup>, Dahee Lim<sup>*</sup>, Jinyoung Huh, <span class="self-author">Young Chang</span>, Uran Oh<sup>†</sup></p></div>
+        </article>
+        <article class="pub-row">
+          <span class="pub-venue">ICTC ’23</span>
+          <div><h3 class="pub-title">ChatGPT Powered Digital Healthcare System</h3><p class="pub-authors">Jaeyong Lee, Gyeyoung Jung, <span class="self-author">Young Chang</span>, Yuju Kang, Jaejeung Kim<sup>†</sup></p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cv-section" id="research-experience" aria-labelledby="h-research-experience">
+      <h2 class="section-heading" id="h-research-experience">Research Experience</h2>
+      <article class="entry">
+        <div class="entry-header"><h3 class="entry-title">HCI Lab, Ewha Womans University</h3><time class="entry-date">2025.09 – Present</time></div>
+        <p class="entry-role">Graduate Researcher (Advisor: Prof. Uran Oh)</p>
+        <ul class="item-list">
+          <li><strong>AI-Generated Personalized Media for Children's Daily Routines</strong>
+            <ul class="nested-list">
+              <li><strong>HabitBuddy</strong> (first author, under review): Led the design, development, and evaluation of a system combining personalized AI-generated songs and character videos to support preschoolers' daily routines.</li>
+              <li><strong>HabitTune</strong> (first author, CHI EA ’26): Led the design, development, and evaluation of a system generating personalized AI songs to support children's positive habit development.</li>
+            </ul>
+          </li>
+          <li><strong>Customer–Robot Handover in Commercial Delivery Services</strong> (co-first author, under review): Analyzed commercial robot delivery data to examine how customer behavior and operational conditions shape handover interactions.</li>
+          <li><strong>Design Guidelines for AI-Generated Personalized Storybooks</strong> (IEEE IRI ’26): Conducted user interviews and surveys, and performed qualitative analysis to inform guideline development.</li>
+          <li><strong>WhiteCane: Robot-Assisted Navigation for People with Visual Impairments</strong>: Developed a user interface for a VLM-based indoor–outdoor robotic navigation system.</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="entry-header"><h3 class="entry-title">Ewha Womans University</h3><time class="entry-date">2026.03 – Present</time></div>
+        <p class="entry-role">Research Assistant (Advisor: Prof. Hyunseok Park)</p>
+        <ul class="item-list"><li><strong>Interpreting and Translation Training Platform (TalkTrack)</strong>: Maintained a web-based translation platform, including bug fixes, server management, and SSL certificate renewal.</li></ul>
+      </article>
+      <article class="entry">
+        <div class="entry-header"><h3 class="entry-title">WellCom Lab, Chungnam National University</h3><time class="entry-date">2023.03 – 2025.02</time></div>
+        <p class="entry-role">Undergraduate Research Intern (Advisor: Prof. Jaejeung Kim)</p>
+        <ul class="item-list"><li><strong>AI Proxy Agent for Smartphone Self-Regulation (PCA)</strong>: Conducted user interviews and qualitative analysis to explore users' perceptions of an AI agent that responds to smartphone self-regulation prompts on their behalf.</li></ul>
+      </article>
+      <article class="entry">
+        <div class="entry-header"><h3 class="entry-title">UX Lab, Seoul National University</h3><time class="entry-date">2023.01 – 2023.02</time></div>
+        <p class="entry-role">Undergraduate Research Intern (Advisor: Prof. Joongseek Lee)</p>
+        <ul class="item-list"><li><strong>UX Research for Shared-Housing Laundry Services</strong>: Conducted UX research and proposed app features to support laundry management for shared housing residents.</li></ul>
+      </article>
+    </section>
+
+    <section class="cv-section" id="work-experience" aria-labelledby="h-work-experience">
+      <h2 class="section-heading" id="h-work-experience">Work Experience</h2>
+      <article class="entry">
+        <div class="entry-header"><h3 class="entry-title">Statistics Korea</h3><time class="entry-date">2025.03 – 06</time></div>
+        <p class="entry-role">Intern, Statistics Service Innovation Promotion Division</p>
+        <ul class="item-list"><li>Built data for KoBot, Statistics Korea's AI chatbot, including document layout analysis (DLA).</li></ul>
+      </article>
+    </section>
+
+    <section class="cv-section" id="teaching-experience" aria-labelledby="h-teaching-experience">
+      <h2 class="section-heading" id="h-teaching-experience">Teaching Experience</h2>
+      <article class="entry">
+        <div class="entry-header"><h3 class="entry-title">Ewha Womans University</h3><time class="entry-date">2026.03 – Present</time></div>
+        <ul class="item-list">
+          <li><strong>Computer Graphics</strong> (Undergraduate, 100+ students), Fall 2026</li>
+          <li><strong>Java Programming and Lab</strong> (Undergraduate, ~30 students), Spring 2026<br>Graded assignments and exams, led lab sessions, answered student questions, and assisted with final grading.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="cv-section" id="honors-and-awards" aria-labelledby="h-honors-and-awards">
+      <h2 class="section-heading" id="h-honors-and-awards">Honors and Awards</h2>
+      <div class="award-list">
+        <article class="award"><time class="award-date">2026.08</time><div><p class="award-title"><strong>Excellence Award (3rd Place)</strong>, Ewha Three Minute Thesis (3MT) Competition</p><p class="award-description">Presented the HabitBuddy research; prize of KRW 800,000 (≈ USD 570).</p></div></article>
+        <article class="award"><time class="award-date">2026.03</time><div><p class="award-title"><strong>Academic Activities Support Scholarship</strong>, Ewha Womans University</p><p class="award-description">Awarded for presenting HabitTune as a poster at CHI 2026; KRW 1,000,000 (≈ USD 710).</p></div></article>
+        <article class="award"><time class="award-date">2025.09 – 12</time><div><p class="award-title"><strong>Brain Korea 21 FOUR Scholarship</strong>, Ministry of Education, Korea</p><p class="award-description">Graduate research stipend from Korea's national Brain Korea 21 FOUR program; KRW 6,000,000 (≈ USD 4,300).</p></div></article>
+        <article class="award"><time class="award-date">2025.09</time><div><p class="award-title"><strong>Excellence Award (2nd Place)</strong>, Statistics Korea Youth Intern Joint Project Achievement Conference</p><p class="award-description">Ranked 2nd among 6 teams for a project improving the UI/UX of KoBot, Statistics Korea's AI chatbot.</p></div></article>
+        <article class="award"><time class="award-date">2024.11</time><div><p class="award-title"><strong>Grand Prize (1st Place)</strong>, Chungnam National University Public Data Utilization Competition</p><p class="award-description">Awarded for <em>Map for All: Barrier-Free Campus Map</em>; prize of KRW 900,000 (≈ USD 640).</p></div></article>
+      </div>
+    </section>
+
+    <section class="cv-section" id="skills" aria-labelledby="h-skills">
+      <h2 class="section-heading" id="h-skills">Skills</h2>
+      <dl class="skills">
+        <div class="skill"><dt>Research Skills</dt><dd>Field Deployments, User Studies, Interviews, Surveys, Statistical Analysis (SPSS), Log Data Analysis, Qualitative Coding, Thematic Analysis</dd></div>
+        <div class="skill"><dt>Technical Skills</dt><dd>Python, JavaScript, TypeScript, Java, HTML/CSS, React, React Native, Flutter, Firebase, MongoDB, Node.js, GitHub, Figma</dd></div>
+      </dl>
+    </section>
+
+    <section class="cv-section" id="student-club-activities" aria-labelledby="h-student-club-activities">
+      <h2 class="section-heading" id="h-student-club-activities">Student Club Activities</h2>
+      <article class="entry">
+        <div class="entry-header"><h3 class="entry-title">LabHER, Ewha Womans University Startup Club</h3><time class="entry-date">2026.03 – Present</time></div>
+        <p class="entry-role">Working on commercializing HabitBuddy.</p>
+      </article>
+    </section>
+
+    <footer class="footer">Young Chang · Curriculum Vitae</footer>
+  </main>
+</body>
+</html>
